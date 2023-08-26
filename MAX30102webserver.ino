@@ -131,8 +131,8 @@ int32_t spo2; //SPO2 값
 int8_t validSPO2; //표시기를 통해 SPO2 계산이 유효한지 확인할 수 있습니다.
 int32_t heartRate; //심박수 값
 int8_t validHeartRate; //표시기를 통해 심박수 계산이 유효한지 확인할 수 있습니다.
-byte pulseLED = 11; //PWM 핀에 있어야 합니다.
-byte readLED = 13; //데이터를 읽을 때마다 깜박임
+byte pulseLED = 45; //PWM 핀에 있어야 합니다.
+byte readLED = 48; //데이터를 읽을 때마다 깜박임
 
  // 지난번 SSE
 long last_sse = 0;
