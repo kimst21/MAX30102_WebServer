@@ -46,9 +46,7 @@ const char index_html[] PROGMEM = R"rawliteral(
           minorTicks: 5
         };
     
-        chartHR = new google.visualization.Gauge(document.getElementById('chart_div_hr'));
-    
-        
+        chartHR = new google.visualization.Gauge(document.getElementById('chart_div_hr'));       
         dataSPO2 = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
           ['SPO2', 0]
@@ -62,9 +60,7 @@ const char index_html[] PROGMEM = R"rawliteral(
           minorTicks: 5
         };
     
-        chartSPO2 = new google.visualization.Gauge(document.getElementById('chart_div_spo2'));
-    
-    
+        chartSPO2 = new google.visualization.Gauge(document.getElementById('chart_div_spo2'));    
         chartHR.draw(dataHR, optionsHR);
         chartSPO2.draw(dataSPO2, optionsSPO2);
         
@@ -94,7 +90,6 @@ const char index_html[] PROGMEM = R"rawliteral(
     }, false);
 }
   </script>
-  
   <style>
     .card {
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -138,8 +133,7 @@ byte readLED = 48; //데이터를 읽을 때마다 깜박임
 long last_sse = 0;
 void connectToWiFi() {
   Serial.print("Connecting to ");
-  Serial.println(SSID);
-  
+  Serial.println(SSID);  
   WiFi.begin(SSID, PWD);
   
   while (WiFi.status() != WL_CONNECTED) {
